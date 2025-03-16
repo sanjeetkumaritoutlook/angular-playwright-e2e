@@ -43,7 +43,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: allure-report
-          path: allure-report
+          path: allure-report/
           run-id: ${{ github.event.workflow_run.id }}          
    #Angular uses client-side routing. GitHub Pages, by default, doesn't understand Angular's routing structure and tries to fetch files directly from the angular-e2e-playwright/ directory, which doesn't exist as a physical path.
    #GitHub Pages doesn't support fallback routing for Single Page Applications (SPA).
