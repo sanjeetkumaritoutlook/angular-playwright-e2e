@@ -39,4 +39,21 @@ jobs:
           name: playwright-test-report
           path: playwright-report/
           retention-days: 7
+          
+         # Install Allure CLI in GitHub Runner
+      - name: Install Allure CLI
+        run: |
+          sudo apt-add-repository ppa:qameta/allure
+          sudo apt-get update
+          sudo apt-get install allure    
+          
+      - name: Generate Allure Report
+        run: npx allure generate allure-results --clean
+        
+      - name: Upload Allure Report as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report/
+    
   
