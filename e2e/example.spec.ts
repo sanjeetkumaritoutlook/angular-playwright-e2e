@@ -16,3 +16,10 @@ test('get started link', async ({ page }) => {
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
+
+
+test('should display Angular Hello message', async ({ page }) => {
+  await page.goto('/');
+  const title = await page.textContent('h1');
+  expect(title).toContain('Hello');
+});
