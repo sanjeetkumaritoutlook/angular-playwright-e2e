@@ -32,3 +32,11 @@ jobs:
 
       - name: Run Playwright Tests
         run: npx playwright test
+        
+      - name: Upload Playwright Videos and Report as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-test-report
+          path: playwright-report/
+          retention-days: 7
+  
