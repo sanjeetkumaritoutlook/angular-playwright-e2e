@@ -106,7 +106,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Calculator should add two numbers correctly",
+          "title": "Calculator should perform basic arithmetic operations",
           "ok": true,
           "tags": [],
           "tests": [
@@ -121,27 +121,27 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4398,
+                  "duration": 8131,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-16T17:58:46.244Z",
+                  "startTime": "2025-03-16T18:24:42.322Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-should-add-two-numbers-correctly-chromium\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-chromium\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-should-add-two-numbers-correctly-chromium\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-chromium\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-should-add-two-numbers-correctly-chromium\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -149,13 +149,13 @@
               "status": "expected"
             }
           ],
-          "id": "c84fc9b033753d864dd2-752d7fd9f4b507b2ce17",
+          "id": "c84fc9b033753d864dd2-8206b858d125455c48e6",
           "file": "calculator.spec.ts",
           "line": 3,
           "column": 5
         },
         {
-          "title": "Calculator should add two numbers correctly",
+          "title": "Calculator should perform basic arithmetic operations",
           "ok": true,
           "tags": [],
           "tests": [
@@ -170,27 +170,27 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 11362,
+                  "duration": 19160,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-16T17:58:46.240Z",
+                  "startTime": "2025-03-16T18:24:41.804Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-should-add-two-numbers-correctly-firefox\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-firefox\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-should-add-two-numbers-correctly-firefox\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-firefox\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-should-add-two-numbers-correctly-firefox\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-firefox\\trace.zip"
                     }
                   ]
                 }
@@ -198,13 +198,13 @@
               "status": "expected"
             }
           ],
-          "id": "c84fc9b033753d864dd2-bf64319273d0c5ae5167",
+          "id": "c84fc9b033753d864dd2-9c56b3c00f3759887c56",
           "file": "calculator.spec.ts",
           "line": 3,
           "column": 5
         },
         {
-          "title": "Calculator should add two numbers correctly",
+          "title": "Calculator should perform basic arithmetic operations",
           "ok": true,
           "tags": [],
           "tests": [
@@ -219,27 +219,27 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 12844,
+                  "duration": 30002,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-16T17:58:46.261Z",
+                  "startTime": "2025-03-16T18:24:42.800Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-should-add-two-numbers-correctly-webkit\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-webkit\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-should-add-two-numbers-correctly-webkit\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-webkit\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-should-add-two-numbers-correctly-webkit\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-webkit\\trace.zip"
                     }
                   ]
                 }
@@ -247,7 +247,7 @@
               "status": "expected"
             }
           ],
-          "id": "c84fc9b033753d864dd2-44e93873ded06339e278",
+          "id": "c84fc9b033753d864dd2-146522c3fca79d647d71",
           "file": "calculator.spec.ts",
           "line": 3,
           "column": 5
@@ -257,8 +257,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-16T17:58:43.254Z",
-    "duration": 20611.696,
+    "startTime": "2025-03-16T18:24:36.690Z",
+    "duration": 36912.651,
     "expected": 3,
     "skipped": 0,
     "unexpected": 0,

@@ -1,19 +1,26 @@
 import { test, expect } from '@playwright/test';
 
-test('Calculator should add two numbers correctly', async ({ page }) => {
-  // Step 1: Navigate to the calculator page
+test('Calculator should perform basic arithmetic operations', async ({ page }) => {
+  // Step 1: Go to the Angular Calculator App
   await page.goto('http://localhost:4200/calculator');
 
-  // Step 2: Fill the first input
-  await page.fill('input[type="number"]:nth-of-type(1)', '5');
+  // Step 2: Fill numbers in input fields
+  await page.fill('input:nth-of-type(1)', '10');
+  await page.fill('input:nth-of-type(2)', '5');
 
-  // Step 3: Fill the second input
-  await page.fill('input[type="number"]:nth-of-type(2)', '3');
+  // Step 3: Click Add and Verify the Result
+  await page.click('text=Add');
+  await expect(page.locator('h2')).toHaveText('Result: 15');
 
-  // Step 4: Click the 'Add' button
-  await page.click('button');
+  // Step 4: Subtract and Verify
+  await page.click('text=Subtract');
+  await expect(page.locator('h2')).toHaveText('Result: 5');
 
-  // Step 5: Validate the result
-  const resultText = await page.locator('h2').textContent();
-  expect(resultText).toContain('8'); // ✅ 5 + 3 = 8
+  // Step 5: Multiply and Verify
+  await page.click('text=Multiply');
+  await expect(page.locator('h2')).toHaveText('Result: 50');
+
+  // Step 6: Divide and Verify
+  await page.click('text=Divide');
+  await expect(page.locator('h2')).toHaveText('Result: 2');
 });

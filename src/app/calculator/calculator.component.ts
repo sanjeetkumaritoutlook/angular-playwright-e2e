@@ -5,23 +5,29 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-calculator',
   standalone: true,
   imports: [CommonModule,FormsModule],
-  template: `
-  <h1>Simple Calculator</h1>
-  <h2>Angular v20:Week of 2025-05-26 <a href="https://github.com/angular/angular-cli/pull/29796" target="_blank">v20</a></h2>
-  <h2>New features: <a href="https://github.com/railsstudent/angular20-new-features/tree/main" target="_blank">v20</a></h2>
-  <input [(ngModel)]="num1" type="number" />
-  <input [(ngModel)]="num2" type="number" />
-  <button (click)="addNumbers()">Add</button>
-  <h2>Result: {{ result }}</h2>
-`,
+ templateUrl: './calculator.component.html',
   styleUrl: './calculator.component.css'
 })
 export class CalculatorComponent {
-  num1 = 0;
-  num2 = 0;
-  result = 0;
+  result: number = 0;
 
-  addNumbers() {
-    this.result = this.num1 + this.num2;
+  calculate(operation: string, num1: string, num2: string) {
+    const n1 = parseFloat(num1);
+    const n2 = parseFloat(num2);
+
+    switch (operation) {
+      case 'add':
+        this.result = n1 + n2;
+        break;
+      case 'subtract':
+        this.result = n1 - n2;
+        break;
+      case 'multiply':
+        this.result = n1 * n2;
+        break;
+      case 'divide':
+        this.result = n1 / n2;
+        break;
+    }
   }
 }

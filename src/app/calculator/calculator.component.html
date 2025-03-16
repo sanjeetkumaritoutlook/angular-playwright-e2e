@@ -1,1 +1,16 @@
-<p>calculator works!</p>
+  <h3>Angular v20:Week of 2025-05-26 <a href="https://github.com/angular/angular-cli/pull/29796" target="_blank">v20</a></h3>
+  <h3>New features: <a href="https://github.com/railsstudent/angular20-new-features/tree/main" target="_blank">v20</a></h3>
+  <div class="calculator">
+    <h1>Real World Calculator 🧮</h1>
+    
+    <input type="number" placeholder="Enter first number" #num1 />
+    <input type="number" placeholder="Enter second number" #num2 />
+  
+    <button (click)="calculate('add', num1.value, num2.value)">➕ Add</button>
+    <button (click)="calculate('subtract', num1.value, num2.value)">➖ Subtract</button>
+    <button (click)="calculate('multiply', num1.value, num2.value)">✖️ Multiply</button>
+    <button (click)="calculate('divide', num1.value, num2.value)">➗ Divide</button>
+  
+    <h2>Result: {{ result }}</h2>
+  </div>
+  
