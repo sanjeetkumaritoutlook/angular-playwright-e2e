@@ -16,12 +16,18 @@ open browser manually (parallelly run ng serve in another terminal)
 
 npx playwright test --headed
 
+npx playwright test e2e/user-grid.spec.ts --headed
+
 
 ## check if Allure results are actually being generated.
 
 check if the allure-results/ folder is being created 
 
 npx playwright test --reporter=line,allure-playwright
+
+## If you haven't added the Angular Router yet:
+
+ng g m app-routing --flat --module=app
 
 
 ## Development server

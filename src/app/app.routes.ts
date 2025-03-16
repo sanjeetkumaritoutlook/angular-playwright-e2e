@@ -1,3 +1,9 @@
 import { Routes } from '@angular/router';
-
-export const routes: Routes = [];
+import { UserGridComponent } from './user-grid/user-grid.component';
+export const routes: Routes = [
+    {path:'',
+        redirectTo:'dataBinding',
+        pathMatch:   'full'
+       },
+    { path: 'about', component: UserGridComponent }
+];
