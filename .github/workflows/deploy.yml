@@ -1,17 +1,13 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name:  Deploy to GitHub Pages
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  workflow_run:
+    workflows: [ "Playwright E2E Tests" ]
+    types:
+      - completed
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,20 +32,34 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        
+      # ✅ Download Allure Report Artifact
+      - name: Download Allure Report Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report  
    #Angular uses client-side routing. GitHub Pages, by default, doesn't understand Angular's routing structure and tries to fetch files directly from the angular-e2e-playwright/ directory, which doesn't exist as a physical path.
    #GitHub Pages doesn't support fallback routing for Single Page Applications (SPA).
       - name: Build Angular app
         run: npm run build -- --base-href=/angular-e2e-playwright/
+        
+      # ✅ Combine Angular and Allure Report
+      - name: Combine Angular Build and Allure Report
+        run: |
+          mkdir -p combined
+          cp -r ./dist/angular-e2e-playwright/browser/* ./combined
+          cp -r ./allure-report/* ./combined/allure-report  
 
+      # ✅ Upload build artifacts to GitHub Pages
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: ./dist/angular-e2e-playwright/browser  # Ensure it matches actual build output
+           path: ./combined
     
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/angular-e2e-playwright/browser  # Ensure this matches the output path
+         
       
