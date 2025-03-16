@@ -78,12 +78,12 @@ jobs:
           name: allure-report
           path: allure-report
 
-         # ✅ Install AWS CLI (via curl)
+            # ✅ Install AWS CLI (with update flag)
       - name: Install AWS CLI
         run: |
           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
           unzip awscliv2.zip
-          sudo ./aws/install
+          sudo ./aws/install --update
 
 
       # ✅ Configure AWS credentials
