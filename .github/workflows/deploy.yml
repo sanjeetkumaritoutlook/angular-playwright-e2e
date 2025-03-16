@@ -1,71 +1,102 @@
-# This is a basic workflow to help you get started with Actions
+name: Run Playwright and Deploy Allure Report to GitHub Pages
 
-name:  Deploy to GitHub Pages
-
-# Controls when the workflow will run
 on:
-  workflow_run:
-    workflows: [ "Playwright E2E Tests" ]
-    types:
-      - completed
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "deploy"
+  e2e-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Angular in Background
+        run: npm run start &
+        env:
+          CI: true
+
+      - name: Run Playwright Tests
+        run: npx playwright test
+
+      # ✅ Generate Allure Report
+      - name: Install Allure CLI
+        run: npm i -g allure-commandline
+
+      - name: Generate Allure Report
+        run: npx allure generate allure-results --clean
+
+      # ✅ Upload Allure Report as Artifact
+      - name: Upload Allure Report as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report/
+
   deploy:
-    # The type of runner that the job will run on
+    needs: e2e-tests
     runs-on: ubuntu-latest
 
     permissions:
-      actions: read  # Allow access to other workflow artifacts
+      actions: read
       contents: read
       pages: write
       id-token: write
-    # Steps represent a sequence of tasks that will be executed as part of the job
+
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm ci
-        
-      # ✅ Add Delay to Avoid Race Condition
-      - name: Wait for Artifact Availability
-        run: sleep 10   
-        
+
       # ✅ Download Allure Report Artifact
       - name: Download Allure Report Artifact
         uses: actions/download-artifact@v4
         with:
           name: allure-report
-          path: allure-report/
-          run-id: ${{ github.event.workflow_run.id }}          
-   #Angular uses client-side routing. GitHub Pages, by default, doesn't understand Angular's routing structure and tries to fetch files directly from the angular-e2e-playwright/ directory, which doesn't exist as a physical path.
-   #GitHub Pages doesn't support fallback routing for Single Page Applications (SPA).
+          path: allure-report
+
+      # ✅ Build Angular with Allure Report inside
       - name: Build Angular app
         run: npm run build -- --base-href=/angular-e2e-playwright/
-        
-      # ✅ Step 6: Copy Allure Report to Angular build folder
+
+      # ✅ Copy Allure Report to Angular build folder
       - name: Copy Allure Report to GitHub Pages
         run: |
           mkdir -p ./dist/angular-e2e-playwright/browser/allure-report
           cp -r allure-report/* ./dist/angular-e2e-playwright/browser/allure-report/
 
-      # ✅ Step 7: Upload Angular build artifacts to GitHub Pages
+      # ✅ Upload Angular Build Artifacts to GitHub Pages
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: ./dist/angular-e2e-playwright/browser 
-    
+
+      # ✅ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         
-      
