@@ -29,6 +29,10 @@ npx playwright test --reporter=line,allure-playwright
 
 ng g m app-routing --flat --module=app
 
+## 🌟 How to View the Trace?
+
+npx playwright show-trace test-results/<your-test-folder>/trace.zip
+
 
 ## Development server
 
