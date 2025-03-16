@@ -42,7 +42,8 @@ jobs:
           
          # Install Allure CLI in GitHub Runner
       - name: Install Allure CLI
-        run: npm i -g allure-commandline    
+        run: npm i -g allure-commandline  
+  
           
       - name: Generate Allure Report
         run: npx allure generate allure-results --clean

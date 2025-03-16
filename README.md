@@ -12,6 +12,13 @@ npx playwright test
 
 npx playwright show-report
 
+## check if Allure results are actually being generated.
+
+check if the allure-results/ folder is being created 
+
+npx playwright test --reporter=line,allure-playwright
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
