@@ -12,6 +12,11 @@ npx playwright test
 
 npx playwright show-report
 
+open browser manually (parallelly run ng serve in another terminal)
+
+npx playwright test --headed
+
+
 ## check if Allure results are actually being generated.
 
 check if the allure-results/ folder is being created 
