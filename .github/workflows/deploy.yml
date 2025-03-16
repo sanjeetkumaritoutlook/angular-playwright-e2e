@@ -121,3 +121,21 @@ jobs:
         uses: actions/deploy-pages@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Get S3 URL
+        id: s3-url
+        run: echo "S3_URL=https://sanjeet-allure-report-bucket.s3.ap-south-1.amazonaws.com/allure-report/index.html" >> $GITHUB_ENV
+        
+      - name: Send Allure Report via Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+           server_address: smtp.gmail.com
+           server_port: 587
+           username: ${{ secrets.EMAIL_USERNAME }}
+           password: ${{ secrets.EMAIL_PASSWORD }}
+           subject: "🎯 Allure Report: Playwright E2E ✅"
+           body: "Hey Team, \n\nHere's the latest Allure Report: ${{ env.S3_URL }} \n\nRegards,\nSanjeet Kumar 😎"
+           to: "your-email@gmail.com"
+           from: "Sanju-Playwright-Bot"
+  
+    
