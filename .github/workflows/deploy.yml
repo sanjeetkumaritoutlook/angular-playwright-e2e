@@ -94,8 +94,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1  # Change this to your bucket region
 
-      # ✅ Upload Allure Report to S3
+      # ✅ Upload Allure Report to S3 (Skip for Now)
       - name: Upload Allure Report to S3
+        if: false
         run: |
            aws s3 sync allure-report s3://sanjeet-allure-report-bucket/allure-report
           
