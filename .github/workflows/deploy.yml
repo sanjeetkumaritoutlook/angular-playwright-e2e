@@ -40,7 +40,7 @@ jobs:
         
       # ✅ Download Allure Report Artifact
       - name: Download Allure Report Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: allure-report
           path: allure-report
