@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
+      actions: read  # Allow access to other workflow artifacts
       contents: read
       pages: write
       id-token: write
@@ -32,6 +33,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+        
+      # ✅ Add Delay to Avoid Race Condition
+      - name: Wait for Artifact Availability
+        run: sleep 10   
         
       # ✅ Download Allure Report Artifact
       - name: Download Allure Report Artifact
