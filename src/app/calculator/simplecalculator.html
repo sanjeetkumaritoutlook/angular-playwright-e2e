@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Simple Calculator</h1>
+  <input id="num1" type="number" />
+  <input id="num2" type="number" />
+  <button id="add">Add</button>
+  <h2 id="result">Result: </h2>
+
+  <script>
+    const num1 = document.getElementById('num1');
+    const num2 = document.getElementById('num2');
+    const result = document.getElementById('result');
+    const addBtn = document.getElementById('add');
+
+    addBtn.addEventListener('click', () => {
+      const sum = parseInt(num1.value) + parseInt(num2.value);
+      result.innerText = `Result: ${sum}`;
+    });
+  </script>
+</body>
+</html>

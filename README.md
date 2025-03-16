@@ -12,6 +12,9 @@ npx playwright test
 
 npx playwright show-report
 
+npx playwright show-trace
+
+
 open browser manually (parallelly run ng serve in another terminal)
 
 npx playwright test --headed

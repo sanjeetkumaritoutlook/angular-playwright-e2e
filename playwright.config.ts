@@ -25,7 +25,8 @@ export default defineConfig({
   reporter: [
     ['html', { outputFolder: 'playwright-report' }],
 	['line'],
-	['allure-playwright']
+	['allure-playwright'],
+	['json', { outputFile: 'report.json' }]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -33,6 +34,7 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
      baseURL: 'http://localhost:4200',
 	 headless: true,
+	 viewport: { width: 1280, height: 720 },
 	 video: 'on',
 	 screenshot: 'on',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
