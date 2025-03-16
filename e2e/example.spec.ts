@@ -1,25 +1,46 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('should have correct title', async ({ page }) => {
+  await page.goto('http://localhost:4200');
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
+  // ✅ Expect Angular app title
+  await expect(page).toHaveTitle(/AngularE2ePlaywright/);
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test('should navigate to Home', async ({ page }) => {
+  await page.goto('http://localhost:4200');
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
+  // ✅ Check if Home link is visible
+  const homeLink = page.locator('a[routerLink="/"]');
+  await expect(homeLink).toBeVisible();
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  // ✅ Click on Home link
+  await homeLink.click();
+
+  // ✅ Check if redirected to Home page
+  await expect(page).toHaveURL('http://localhost:4200/');
 });
 
+test('should navigate to Allure Report', async ({ page }) => {
+  await page.goto('http://localhost:4200');
+
+  // ✅ Click on "View Test Report" link
+  const allureLink = page.locator('a[href="https://sanjeetkumaritoutlook.github.io/angular-e2e-playwright/allure-report/"]');
+  await expect(allureLink).toBeVisible();
+
+  // ✅ Open in new tab
+  const [newPage] = await Promise.all([
+    page.waitForEvent('popup'),
+    allureLink.click()
+  ]);
+
+  // ✅ Check if Allure report opens
+  await expect(newPage).toHaveURL(/allure-report/);
+});
 
 test('should display Angular Hello message', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('http://localhost:4200');
+
   const title = await page.textContent('h1');
   expect(title).toContain('Hello');
 });

@@ -78,6 +78,25 @@ jobs:
           name: allure-report
           path: allure-report
 
+       # ✅ Install AWS CLI
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      # ✅ Configure AWS credentials
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1  # Change this to your bucket region
+
+      # ✅ Upload Allure Report to S3
+      - name: Upload Allure Report to S3
+        run: |
+           aws s3 sync allure-report s3://sanjeet-allure-report-bucket/allure-report
+          
       # ✅ Build Angular with Allure Report inside
       - name: Build Angular app
         run: npm run build -- --base-href=/angular-e2e-playwright/
