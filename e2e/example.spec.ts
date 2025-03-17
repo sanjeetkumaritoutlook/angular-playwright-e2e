@@ -41,6 +41,6 @@ test('should navigate to Allure Report', async ({ page }) => {
 test('should display Angular Hello message', async ({ page }) => {
   await page.goto('http://localhost:4200');
 
-  const title = await page.textContent('h1');
-  expect(title).toContain('Hello');
+  const title = await page.locator('.app-title');
+   await expect(title).toContainText('Hello');
 });
