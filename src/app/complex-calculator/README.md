@@ -32,4 +32,19 @@ Verify memory operations (MC, MR, M+, M-).
 
 https://esbuild.github.io/link/direct-eval
 
+You can use Function() constructor or implement a safer approach with math.js library or your own expression parser.
+
+earlier:
+
+this.currentValue = eval(this.currentValue).toString();
+
+now:
+
+this.currentValue = Function(`'use strict'; return (${this.currentValue})`)();
+
+Solution 2: Using math.js library (Recommended for complex expressions)
+
+import { evaluate } from 'mathjs';
+
+
 

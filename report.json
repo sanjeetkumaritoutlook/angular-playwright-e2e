@@ -100,13 +100,13 @@
   },
   "suites": [
     {
-      "title": "calculator.spec.ts",
-      "file": "calculator.spec.ts",
+      "title": "complex-calculator.spec.ts",
+      "file": "complex-calculator.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Calculator should perform basic arithmetic operations",
+          "title": "Real World Calculator should perform all operations",
           "ok": true,
           "tags": [],
           "tests": [
@@ -121,27 +121,27 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8131,
+                  "duration": 5296,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-16T18:24:42.322Z",
+                  "startTime": "2025-03-17T01:43:11.633Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-chromium\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\complex-calculator-Real-Wo-03302-ould-perform-all-operations-chromium\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-chromium\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\complex-calculator-Real-Wo-03302-ould-perform-all-operations-chromium\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-chromium\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\complex-calculator-Real-Wo-03302-ould-perform-all-operations-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -149,13 +149,13 @@
               "status": "expected"
             }
           ],
-          "id": "c84fc9b033753d864dd2-8206b858d125455c48e6",
-          "file": "calculator.spec.ts",
+          "id": "8e2774d7ad7254641ad6-79bcf8dd9d264e348552",
+          "file": "complex-calculator.spec.ts",
           "line": 3,
           "column": 5
         },
         {
-          "title": "Calculator should perform basic arithmetic operations",
+          "title": "Real World Calculator should perform all operations",
           "ok": true,
           "tags": [],
           "tests": [
@@ -170,27 +170,27 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 19160,
+                  "duration": 10987,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-16T18:24:41.804Z",
+                  "startTime": "2025-03-17T01:43:11.614Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-firefox\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\complex-calculator-Real-Wo-03302-ould-perform-all-operations-firefox\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-firefox\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\complex-calculator-Real-Wo-03302-ould-perform-all-operations-firefox\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-firefox\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\complex-calculator-Real-Wo-03302-ould-perform-all-operations-firefox\\trace.zip"
                     }
                   ]
                 }
@@ -198,13 +198,13 @@
               "status": "expected"
             }
           ],
-          "id": "c84fc9b033753d864dd2-9c56b3c00f3759887c56",
-          "file": "calculator.spec.ts",
+          "id": "8e2774d7ad7254641ad6-143ac93e148d8af6ca0c",
+          "file": "complex-calculator.spec.ts",
           "line": 3,
           "column": 5
         },
         {
-          "title": "Calculator should perform basic arithmetic operations",
+          "title": "Real World Calculator should perform all operations",
           "ok": true,
           "tags": [],
           "tests": [
@@ -219,27 +219,27 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 30002,
+                  "duration": 12111,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-16T18:24:42.800Z",
+                  "startTime": "2025-03-17T01:43:11.662Z",
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-webkit\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\complex-calculator-Real-Wo-03302-ould-perform-all-operations-webkit\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-webkit\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\complex-calculator-Real-Wo-03302-ould-perform-all-operations-webkit\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\calculator-Calculator-shou-e0d37-basic-arithmetic-operations-webkit\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\complex-calculator-Real-Wo-03302-ould-perform-all-operations-webkit\\trace.zip"
                     }
                   ]
                 }
@@ -247,8 +247,8 @@
               "status": "expected"
             }
           ],
-          "id": "c84fc9b033753d864dd2-146522c3fca79d647d71",
-          "file": "calculator.spec.ts",
+          "id": "8e2774d7ad7254641ad6-6aec2cd34dadcd8f2aaf",
+          "file": "complex-calculator.spec.ts",
           "line": 3,
           "column": 5
         }
@@ -257,8 +257,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-16T18:24:36.690Z",
-    "duration": 36912.651,
+    "startTime": "2025-03-17T01:43:09.918Z",
+    "duration": 16427.678,
     "expected": 3,
     "skipped": 0,
     "unexpected": 0,
