@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.13.
 
+Setup angular 17 app, without global cli version conflict:
+
+npx @angular/cli@17 new my-app
+
+
 ## Running end-to-end tests (General)
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
