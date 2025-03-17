@@ -1,0 +1,33 @@
+<div class="calculator">
+    <input type="text" [(ngModel)]="currentValue" readonly />
+  
+    <div class="buttons">
+      <button (click)="handleButtonClick('MC')">MC</button>
+      <button (click)="handleButtonClick('MR')">MR</button>
+      <button (click)="handleButtonClick('M+')">M+</button>
+      <button (click)="handleButtonClick('M-')">M-</button>
+  
+      <button (click)="handleButtonClick('7')">7</button>
+      <button (click)="handleButtonClick('8')">8</button>
+      <button (click)="handleButtonClick('9')">9</button>
+      <button (click)="handleButtonClick('/')">÷</button>
+  
+      <button (click)="handleButtonClick('4')">4</button>
+      <button (click)="handleButtonClick('5')">5</button>
+      <button (click)="handleButtonClick('6')">6</button>
+      <button (click)="handleButtonClick('*')">x</button>
+  
+      <button (click)="handleButtonClick('1')">1</button>
+      <button (click)="handleButtonClick('2')">2</button>
+      <button (click)="handleButtonClick('3')">3</button>
+      <button (click)="handleButtonClick('-')">-</button>
+  
+      <button (click)="handleButtonClick('0')">0</button>
+      <button (click)="handleButtonClick('.')">.</button>
+      <button (click)="handleButtonClick('C')">C</button>
+      <button (click)="handleButtonClick('+')">+</button>
+  
+      <button class="equals" (click)="handleButtonClick('=')">=</button>
+    </div>
+  </div>
+  
