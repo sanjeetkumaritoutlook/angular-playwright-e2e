@@ -46,5 +46,8 @@ Solution 2: Using math.js library (Recommended for complex expressions)
 
 import { evaluate } from 'mathjs';
 
+eval() is an ECMAScript1 (JavaScript 1997) feature.
+
+https://www.w3schools.com/jsref/jsref_eval.asp
 
 

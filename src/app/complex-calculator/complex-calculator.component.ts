@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { evaluate } from 'mathjs';
+//import { evaluate } from 'mathjs';
 @Component({
   selector: 'app-complex-calculator',
   standalone: true,
@@ -33,8 +33,8 @@ export class ComplexCalculatorComponent {
 
   calculateResult() {
     try {
-     // this.currentValue = Function(`'use strict'; return (${this.currentValue})`)();
-     this.currentValue = evaluate(this.currentValue).toString();
+      this.currentValue = Function(`'use strict'; return (${this.currentValue})`)();
+     //this.currentValue = evaluate(this.currentValue).toString();
     } catch {
       this.currentValue = 'Error';
     }
