@@ -11,5 +11,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-e2e-playwright';
+  title = 'angular-playwright-e2e';
 }

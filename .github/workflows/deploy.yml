@@ -101,20 +101,20 @@ jobs:
           
       # ✅ Build Angular with Allure Report inside
       - name: Build Angular app
-        run: npm run build -- --base-href=/angular-e2e-playwright/
+        run: npm run build -- --base-href=/angular-playwright-e2e/
 
       # ✅ Copy Allure Report to Angular build folder
       - name: Copy Allure Report to GitHub Pages
         run: |
-          mkdir -p ./dist/angular-e2e-playwright/browser/allure-report
-          cp -r allure-report/* ./dist/angular-e2e-playwright/browser/allure-report/
+          mkdir -p ./dist/angular-playwright-e2e/browser/allure-report
+          cp -r allure-report/* ./dist/angular-playwright-e2e/browser/allure-report/
 
       # ✅ Upload Angular Build Artifacts to GitHub Pages
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
-          path: ./dist/angular-e2e-playwright/browser 
+          path: ./dist/angular-playwright-e2e/browser 
 
       # ✅ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages

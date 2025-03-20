@@ -25,7 +25,7 @@ test('should navigate to Allure Report', async ({ page }) => {
   await page.goto('http://localhost:4200');
 
   // ✅ Click on "View Test Report" link
-  const allureLink = page.locator('a[href="https://sanjeetkumaritoutlook.github.io/angular-e2e-playwright/allure-report/"]');
+  const allureLink = page.locator('a[href="https://sanjeetkumaritoutlook.github.io/angular-playwright-e2e/allure-report/"]');
   await expect(allureLink).toBeVisible();
 
   // ✅ Open in new tab

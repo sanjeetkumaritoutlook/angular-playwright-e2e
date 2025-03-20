@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'angular-e2e-playwright' title`, () => {
+  it(`should have the 'angular-playwright-e2e' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-e2e-playwright');
+    expect(app.title).toEqual('angular-playwright-e2e');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-e2e-playwright');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-playwright-e2e');
   });
 });

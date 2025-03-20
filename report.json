@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\playwright.config.ts",
-    "rootDir": "D:/Sanjeet/Angular_repo/angular-e2e-playwright/e2e",
+    "configFile": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\playwright.config.ts",
+    "rootDir": "D:/Sanjeet/Angular_repo/angular-playwright-e2e/e2e",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -26,7 +26,7 @@
         null
       ],
       [
-        "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
         null
       ],
       [
@@ -43,7 +43,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "D:/Sanjeet/Angular_repo/angular-e2e-playwright/test-results",
+        "outputDir": "D:/Sanjeet/Angular_repo/angular-playwright-e2e/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -51,7 +51,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "D:/Sanjeet/Angular_repo/angular-e2e-playwright/e2e",
+        "testDir": "D:/Sanjeet/Angular_repo/angular-playwright-e2e/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -59,7 +59,7 @@
         "timeout": 30000
       },
       {
-        "outputDir": "D:/Sanjeet/Angular_repo/angular-e2e-playwright/test-results",
+        "outputDir": "D:/Sanjeet/Angular_repo/angular-playwright-e2e/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -67,7 +67,7 @@
         },
         "id": "firefox",
         "name": "firefox",
-        "testDir": "D:/Sanjeet/Angular_repo/angular-e2e-playwright/e2e",
+        "testDir": "D:/Sanjeet/Angular_repo/angular-playwright-e2e/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -75,7 +75,7 @@
         "timeout": 30000
       },
       {
-        "outputDir": "D:/Sanjeet/Angular_repo/angular-e2e-playwright/test-results",
+        "outputDir": "D:/Sanjeet/Angular_repo/angular-playwright-e2e/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -83,7 +83,7 @@
         },
         "id": "webkit",
         "name": "webkit",
-        "testDir": "D:/Sanjeet/Angular_repo/angular-e2e-playwright/e2e",
+        "testDir": "D:/Sanjeet/Angular_repo/angular-playwright-e2e/e2e",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -131,17 +131,17 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-have-correct-title-chromium\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-have-correct-title-chromium\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-have-correct-title-chromium\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-have-correct-title-chromium\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-have-correct-title-chromium\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-have-correct-title-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -180,17 +180,17 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Home-chromium\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Home-chromium\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Home-chromium\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Home-chromium\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Home-chromium\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Home-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -229,27 +229,27 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-chromium\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-chromium\\test-finished-1.png"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-chromium\\test-finished-2.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-chromium\\test-finished-2.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-chromium\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-chromium\\video.webm"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-chromium\\video-1.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-chromium\\video-1.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-chromium\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -288,17 +288,17 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-display-Angular-Hello-message-chromium\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-display-Angular-Hello-message-chromium\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-display-Angular-Hello-message-chromium\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-display-Angular-Hello-message-chromium\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-display-Angular-Hello-message-chromium\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-display-Angular-Hello-message-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -337,17 +337,17 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-have-correct-title-firefox\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-have-correct-title-firefox\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-have-correct-title-firefox\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-have-correct-title-firefox\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-have-correct-title-firefox\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-have-correct-title-firefox\\trace.zip"
                     }
                   ]
                 }
@@ -386,17 +386,17 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Home-firefox\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Home-firefox\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Home-firefox\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Home-firefox\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Home-firefox\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Home-firefox\\trace.zip"
                     }
                   ]
                 }
@@ -435,27 +435,27 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-firefox\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-firefox\\test-finished-1.png"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-firefox\\test-finished-2.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-firefox\\test-finished-2.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-firefox\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-firefox\\video.webm"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-firefox\\video-1.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-firefox\\video-1.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-firefox\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-firefox\\trace.zip"
                     }
                   ]
                 }
@@ -494,17 +494,17 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-display-Angular-Hello-message-firefox\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-display-Angular-Hello-message-firefox\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-display-Angular-Hello-message-firefox\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-display-Angular-Hello-message-firefox\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-display-Angular-Hello-message-firefox\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-display-Angular-Hello-message-firefox\\trace.zip"
                     }
                   ]
                 }
@@ -543,17 +543,17 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-have-correct-title-webkit\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-have-correct-title-webkit\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-have-correct-title-webkit\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-have-correct-title-webkit\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-have-correct-title-webkit\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-have-correct-title-webkit\\trace.zip"
                     }
                   ]
                 }
@@ -592,17 +592,17 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Home-webkit\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Home-webkit\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Home-webkit\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Home-webkit\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Home-webkit\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Home-webkit\\trace.zip"
                     }
                   ]
                 }
@@ -641,27 +641,27 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-webkit\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-webkit\\test-finished-1.png"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-webkit\\test-finished-2.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-webkit\\test-finished-2.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-webkit\\video-1.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-webkit\\video-1.webm"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-webkit\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-webkit\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-navigate-to-Allure-Report-webkit\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-navigate-to-Allure-Report-webkit\\trace.zip"
                     }
                   ]
                 }
@@ -700,17 +700,17 @@
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-display-Angular-Hello-message-webkit\\test-finished-1.png"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-display-Angular-Hello-message-webkit\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-display-Angular-Hello-message-webkit\\video.webm"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-display-Angular-Hello-message-webkit\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\Sanjeet\\Angular_repo\\angular-e2e-playwright\\test-results\\example-should-display-Angular-Hello-message-webkit\\trace.zip"
+                      "path": "D:\\Sanjeet\\Angular_repo\\angular-playwright-e2e\\test-results\\example-should-display-Angular-Hello-message-webkit\\trace.zip"
                     }
                   ]
                 }

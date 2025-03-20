@@ -1,5 +1,5 @@
 {
-  "name": "angular-e2e-playwright",
+  "name": "angular-playwright-e2e",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
