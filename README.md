@@ -6,6 +6,7 @@ Setup angular 17 app, without global cli version conflict:
 
 npx @angular/cli@17 new my-app
 
+npx @angular/cli@17 new my-app --no-standalone
 
 ## Running end-to-end tests (General)
 
