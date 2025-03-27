@@ -1,5 +1,5 @@
 name: Run Playwright and Deploy Allure Report to GitHub Pages
-
+run-name: "${{ github.ref_name }}_${{ github.run_id }}_${{ github.run_attempt }}"
 on:
   push:
     branches:

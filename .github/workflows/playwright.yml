@@ -1,7 +1,28 @@
 name: Playwright E2E Tests (Only on Manual Run)
+run-name: "${{ inputs.deployment-environment }}: ${{ inputs.build-number }}"
 
 on:
    workflow_dispatch:
+     inputs:
+      build-number:
+        description: Build number to deploy
+        required: true
+        type: string
+      deployment-environment:
+        required: true
+        description: Deployment environment
+        type: choice
+        options:
+          - development
+          - test
+          - production
+
+permissions:
+  contents: read
+  id-token: write
+
+# Prevent multiple run to the same deployment environment from running at the same time.
+concurrency: ${{ inputs.deployment-environment }}-e2e-tests
 
 jobs:
   e2e-tests:
