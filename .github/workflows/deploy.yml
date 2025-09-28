@@ -17,7 +17,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get Build Number
-        run: echo "Build #${{ github.run_number }}" > build-number-run.txt  
+        run: |
+          echo "Build #${{ github.run_number }}" > build-number-run.txt
 
       - name: Run Codacy analysis
         env:
