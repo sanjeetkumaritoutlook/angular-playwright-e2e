@@ -1,0 +1,32 @@
+name: Update Build Badge
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout repository
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      # 2️⃣ Update README badge with latest run number
+      - name: Update README build number
+        run: |
+          BUILD_NUMBER=${{ github.run_number }}
+          echo "Updating README badge to build #$BUILD_NUMBER"
+          sed -i "s/#BUILD_NUMBER/$BUILD_NUMBER/g" README.md
+
+      # 3️⃣ Commit & push changes
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update build badge to #${{ github.run_number }}" || echo "No changes to commit"
+          git push
