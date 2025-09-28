@@ -81,6 +81,23 @@ Latest Build: **![Build](https://img.shields.io/badge/build-#PLACEHOLDER-blue)**
 
 ![Build Badge](https://img.shields.io/badge/build-#BUILD_NUMBER-blue)
 
+## Disabling a GitHub Actions workflow is straightforward.
+
+There are a couple of ways:
+
+1️⃣ From GitHub Web UI
+
+Go to your repository on GitHub.
+
+Click on Actions tab.
+
+In the left sidebar, select the workflow you want to disable.
+
+Click the ⋯ (three dots) button on the top right of the workflow page.
+
+Select Disable workflow.
+
+✅ This stops it from running on any future triggers.
 
 ## Development server
 
