@@ -16,6 +16,9 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Get Build Number
+        run: echo "Build #${{ github.run_number }}" > build-number-run.txt  
+
       - name: Run Codacy analysis
         env:
           CODACY_API_TOKEN: ${{ secrets.CODACY_API_TOKEN }}
@@ -111,7 +114,13 @@ jobs:
       # ✅ Build Angular with Allure Report inside
       - name: Build Angular app
         run: npm run build -- --base-href=/angular-playwright-e2e/
-
+      
+      # ✅ Upload  Build number to GitHub Pages
+      - name: Prepare build runner artifacts
+        run: |
+         # Create a build-number.txt file with the GitHub run number
+         echo "Build #${{ github.run_number }}" > ./dist/angular-playwright-e2e/browser/build-number.txt
+  
       # ✅ Copy Allure Report to Angular build folder
       - name: Copy Allure Report to GitHub Pages
         run: |
