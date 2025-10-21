@@ -22,8 +22,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Playwright E2E on HyperExecute Cloud
-        run: npx hyperexecute --config ./hyperexecute.yaml
+      # 👇 Download HyperExecute binary directly
+      - name: Download HyperExecute CLI
+        run: |
+          curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
+          chmod +x hyperexecute
+
+      # 👇 Run tests using downloaded binary
+      - name: Run Playwright E2E tests on HyperExecute Cloud
+        run: ./hyperexecute --config ./hyperexecute.yaml
         env:
           LT_USERNAME: ${{ secrets.LT_USERNAME }}
           LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
