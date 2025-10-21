@@ -7,22 +7,18 @@ globalTimeout: 30
 testSuiteTimeout: 20
 testSuiteStep: 300
 
-# Pre-test setup
 pre:
   - npm ci
   - npx playwright install --with-deps
 
-# Discover Playwright tests dynamically
 testDiscovery:
   type: raw
   mode: dynamic
   command: npx playwright test --list
 
-# The test runner command for each discovered test
 testRunnerCommand: npx playwright test --project=chromium
 
-# Upload Playwright results to the dashboard
 uploadArtifacts:
   - name: playwright-results
     path:
-      - test-results/
+      - "test-results/"
