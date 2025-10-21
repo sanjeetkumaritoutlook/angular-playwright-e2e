@@ -24,4 +24,5 @@ testRunnerCommand: npx playwright test --project=chromium
 # Upload Playwright results to the dashboard
 uploadArtifacts:
   - name: playwright-results
-    path: test-results/
+    path:
+      - test-results/
