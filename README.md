@@ -4,44 +4,55 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Setup angular 17 app, without global cli version conflict:
 
+```
 npx @angular/cli@17 new my-app
 
 npx @angular/cli@17 new my-app --no-standalone
-
+```
 ## Running end-to-end tests (General)
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Run playwright
+![Angular e2e options](e2eoptions.png)
 
+## Run playwright
+all tests are in e2e folder
+
+before this command, keep angular application running in another tab and then these commands
+```
 npx playwright test
 
 npx playwright show-report
 
 npx playwright show-trace
-
+```
 
 open browser manually (parallelly run ng serve in another terminal)
 
+```
 npx playwright test --headed
 
 npx playwright test e2e/user-grid.spec.ts --headed
-
+```
 
 ## check if Allure results are actually being generated.
 
 check if the allure-results/ folder is being created 
 
+```
 npx playwright test --reporter=line,allure-playwright
+```
 
 ## If you haven't added the Angular Router yet:
-
+```
 ng g m app-routing --flat --module=app
+```
 
 ## 🌟 How to View the Trace?
 
+```
 npx playwright show-trace test-results/<your-test-folder>/trace.zip
-
+```
 
 ## badges/shields in github actions
 (main_14104423181_1) is the GitHub Actions run name.
