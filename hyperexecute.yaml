@@ -6,22 +6,31 @@ maxRetries: 1
 globalTimeout: 30
 testSuiteTimeout: 20
 testSuiteStep: 300
-jobLabel: ['SanjeetKumar', 'APE']
 
+# Optional: enable Playwright debug logs
+env:
+  DEBUG: "pw:api,pw:loader"
+
+# Pre-test setup
 pre:
+  - echo "📦 Installing dependencies..."
   - npm ci
+  - echo "🧩 Installing Playwright browsers..."
   - npx playwright install --with-deps
+  - echo "✅ Pre-test setup completed."
 
+# Discover Playwright tests dynamically
 testDiscovery:
-  shell: bash
-  autosubset: true
-  command: npx playwright test e2e/* --project=edge:latest:Windows@lambdatest --list | grep -o "› [^:]*:[0-9]*" | sed "s/^› //" | tr "\\\\" "/"
-  mode: dynamic
   type: raw
+  mode: dynamic
+  command: npx playwright test --list --reporter=list
 
-testRunnerCommand: npx playwright test $test --headed --project=edge:latest:Windows@lambdatest
+# Command to run tests
+testRunnerCommand: npx playwright test
 
-uploadArtifacts:
-  - name: playwright-results
-    path:
-      - "test-results/"
+# ✅ Post-test diagnostics
+post:
+  - echo "🧾 Diagnostic check: Counting total test cases..."
+  - npx playwright test --list | tee testlist.txt
+  - echo "Total tests found:" $(grep -c "›" testlist.txt || echo "0")
+  - echo "✅ Discovery verification completed."
