@@ -6,17 +6,20 @@ maxRetries: 1
 globalTimeout: 30
 testSuiteTimeout: 20
 testSuiteStep: 300
+jobLabel: ['SanjeetKumar', 'APE']
 
 pre:
   - npm ci
   - npx playwright install --with-deps
 
 testDiscovery:
-  type: raw
+  shell: bash
+  autosubset: true
+  command: npx playwright test e2e/* --project=edge:latest:Windows@lambdatest --list | grep -o "› [^:]*:[0-9]*" | sed "s/^› //" | tr "\\\\" "/"
   mode: dynamic
-  command: npx playwright test --config=playwright.config.ts --list
+  type: raw
 
-testRunnerCommand: npx playwright test --config=playwright.config.ts --project=chromium
+testRunnerCommand: npx playwright test $test --headed --project=edge:latest:Windows@lambdatest
 
 uploadArtifacts:
   - name: playwright-results
