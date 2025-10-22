@@ -14,9 +14,9 @@ pre:
 testDiscovery:
   type: raw
   mode: dynamic
-  command: npx playwright test --list
+  command: npx playwright test --config=playwright.config.ts --list
 
-testRunnerCommand: npx playwright test --project=chromium
+testRunnerCommand: npx playwright test --config=playwright.config.ts --project=chromium
 
 uploadArtifacts:
   - name: playwright-results
