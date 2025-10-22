@@ -29,7 +29,9 @@ testDiscovery:
 # Command to run tests
 testRunnerCommand: npx playwright test
 
+# ✅ Upload artifacts after run
 uploadArtifacts:
-  - name: playwright-results
+  - name: playwright-artifacts
     path:
-      - ["test-results/"]
+      - "test-results/"
+      - "playwright-report/"
