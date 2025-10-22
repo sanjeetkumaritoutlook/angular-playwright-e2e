@@ -6,6 +6,7 @@ maxRetries: 1
 globalTimeout: 30
 testSuiteTimeout: 20
 testSuiteStep: 300
+jobLabel: ['SanjeetKumar', 'APE']
 
 # Optional: enable Playwright debug logs
 env:
@@ -28,3 +29,7 @@ testDiscovery:
 # Command to run tests
 testRunnerCommand: npx playwright test
 
+uploadArtifacts:
+  - name: playwright-results
+    path:
+      - ["test-results/"]
