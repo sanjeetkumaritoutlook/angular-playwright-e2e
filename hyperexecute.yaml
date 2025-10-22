@@ -28,9 +28,10 @@ testDiscovery:
 # Command to run tests
 testRunnerCommand: npx playwright test
 
-# ✅ Post-test diagnostics
+# ✅ Post-test diagnostics 
 post:
   - echo "🧾 Diagnostic check: Counting total test cases..."
-  - npx playwright test --list | tee testlist.txt
-  - echo "Total tests found:" $(grep -c "›" testlist.txt || echo "0")
-  - echo "✅ Discovery verification completed."
+  - >
+    npx playwright test --list | tee testlist.txt &&
+    echo "Total tests found:" $(grep -c "›" testlist.txt || echo "0") &&
+    echo "✅ Discovery verification completed."
